@@ -8,7 +8,7 @@
       "type": "image/png"
     }
   ],
-  "start_url": "./insulti_gratis",
+  "start_url": "/insulti_gratis",
   "display": "standalone",
   "theme_color": "black",
   "background_color": "black"
