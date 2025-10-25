@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<style>
+    * {
+        background-color: black;
+    }
+
+    h1 {
+        color: white;
+        display: flex;
+        justify-content: center;
+        font-size: xxx-large;
+        text-align: center;
+    }
+</style>
+
+<head>
+    Insulti Gratis
+    <link rel="manifest" href="manifest.json" />
+</head>
+
+<body>
+    <h1 id="text"></h1>
+</body>
+<script>
+    var insulti = [
+        "Puzzi",
+        "Potresti considerare una doccia",
+        "Merda",
+        "Fai un po' pena",
+        "Fai schifo pure alle mosche (apprezzano la merda)",
+        "Sei Geneticamente evitabile",
+        "Sei un errore in alta definizione",
+        "Sei Orgogliosamente inutile",
+        "Spreco di ossigeno",
+        "Capolavoro di mediocrità",
+        "Sembri un pensiero sbagliato",
+        "Evoluzione interrotta",
+        "Sei l'anteprima del fallimento",
+        "Difetto in carne e ossa",
+        "Cammini storto",
+        "Hai lo sguardo brutto",
+        "Microbo",
+        "Sei la virgola fuori posto nella frase della vita",
+        "Sei un ricordo che nessuno ha scelto",
+        "Vergognati",
+        "Sei la pausa imbarazzante tra due delusioni",
+        "Sei un applauso morto in una stanza vuota",
+        "Ti porti addosso l'eco di tutto ciò che potevi essere",
+        "Sei un frammento di nulla con troppe pretese",
+        "Quella maglia c'è anche per persone intelligenti",
+        "Sei una candela spenta",
+        "Sei la prova che non tutti i fiori meritano di sbocciare",
+        "Sei una ciambella senza il buco",
+        "Russi",
+        "Lavati i denti",
+        "Crepi gli specchi",
+        "Fanculo"
+    ]
+    let n = Math.floor(Math.random() * insulti.length);
+    document.getElementById("text").innerText = insulti[n];
+</script>
+
+</html>
