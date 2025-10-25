@@ -1,7 +1,10 @@
 //WebGL
 var canvas = document.getElementById("canvas"); var width = canvas.clientWidth; var height = canvas.clientHeight; canvas.width = width; canvas.height = height;
-window.onresize = () => { width = canvas.clientWidth; height = canvas.clientHeight; canvas.width = width; canvas.height = height; }
 var gl;
+window.onresize = () => {
+    width = canvas.clientWidth; height = canvas.clientHeight; canvas.width = width * 2.0; canvas.height = height * 2.0;
+    gl.viewport(0, 0, gl.canvas.width, gl.canvas.height);
+}
 //HTML
 var htmlFps = document.getElementById("fps");
 var htmlPrecision = document.getElementById("precision"); var htmlPrecisionLabel = document.getElementById("precisionLabel");
@@ -397,7 +400,7 @@ function main() {
         htmlMaxIter.style.width = "70%";
         htmlPower.style.width = "70%";
     }
-    gl = canvas.getContext("webgl"); if (!gl) { throw new Error("WebGL not supported!"); }
+    gl = canvas.getContext("webgl", {antialias:true}); if (!gl) { throw new Error("WebGL not supported!"); }
     updatePrecision();
     setupWebGL();
     //input listener
