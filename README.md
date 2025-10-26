@@ -1,5 +1,6 @@
 # Github Pages Website
-This is a basic static website that is hosted by github servers available at the link [francescofattori.github.io](https://francescofattori.github.io)
+This is the main repository of a basic static website that is hosted by github servers available at the link [francescofattori.github.io](https://francescofattori.github.io).\
+This service cannot run a proper server application but can host html client files. Specific servers has to be run separately.
 
 ## Rules
 * With a personal account the repository must be public
@@ -10,4 +11,9 @@ This is a basic static website that is hosted by github servers available at the
 * Any `/directory/index.html` can be accessed at `/directory/` (note the final `/`)
 
 ## Include other repositories
-It's possible to access other repositories file if they get published as a page on their settings menu.
+It's possible to access other repositories files if the repository is published as a page on their settings menu.\
+The root folder for this files is `/repository_name/` and at this url the `index.html` file will be displayed.\
+It's important to notice that if a file is hosted on the main repository and has the same name of another repository
+it won't be accessible because the url `/filename` will be redirected to `/repository_name/` (`filename == repository_name`).\
+The main repository is set to https but this can me changed, and every repository can choose it's protocol. (useful for easy server applications)
+
