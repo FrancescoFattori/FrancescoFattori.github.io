@@ -16,4 +16,4 @@ It's possible to access other repositories files if the repository is published 
 The root folder for this files is the same and at this url `/repository_name/` the `index.html` file will be displayed.\
 It's important to notice that if a file is hosted on the main repository and has the same name of another repository
 it won't be accessible because the url `/filename` will be redirected to `/repository_name/` (`filename == repository_name`).\
-Path to files can be relative `./index.css` (suggested), or static `/repository_name/index.css` (better avoid using this as repository could change name).
+Path to files can be relative `index.css` or `./index.css` (suggested), or static `/repository_name/index.css` (better avoid using this as repository could change name).
