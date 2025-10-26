@@ -2,55 +2,165 @@
 <html lang="it">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Francesco Fattori — Progetti</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Francesco Fattori</title>
   <style>
-    html,body{height:100%;margin:0;overflow:hidden;}
-    body{
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      background:#071019;
-      color:#e6f3f7;
-      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;
-      -webkit-font-smoothing:antialiased;
-      padding:24px;
+    :root {
+      --bg: #0b0b0d;
+      --text: #f5f5f5;
+      --accent: #e0e0e0;
+      --muted: #c0c0c0;
+      --card: #1a1a1a;
+      --border: rgba(255,255,255,0.12);
+      font-family: 'Inter', system-ui, sans-serif;
+      color-scheme: dark;
     }
-    .wrap{
-      text-align:center;
-      max-width:520px;
-      width:100%;
+
+    * {
+      box-sizing: border-box;
     }
-    h1{margin:0 0 10px 0;font-weight:700;font-size:20px}
-    h2{margin:0 0 20px 0;font-weight:600;font-size:14px}
-    ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px}
-    a{
-      display:block;
-      padding:12px 14px;
-      border-radius:8px;
-      text-decoration:none;
-      color:#dff7fb;
-      background:rgba(255,255,255,0.02);
-      border:1px solid rgba(255,255,255,0.03);
-      transition:transform .12s,box-shadow .12s;
-      font-size:16px;
-      text-align:center;
-      font-weight:600;
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      background: var(--bg);
+      color: var(--text);
+      overflow-x: hidden;
+      overflow-y: auto;
     }
-    a:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(2,6,23,0.6)}
-    @media (max-width:460px){ .wrap{padding:0 8px} a{font-size:16px} }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 100vh;
+      padding: 2rem 1rem 4rem;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      margin: 0.3rem 0;
+    }
+
+    p.subtitle {
+      color: var(--muted);
+      font-size: 1rem;
+      margin: 0;
+    }
+
+    main {
+      width: 100%;
+      max-width: 460px;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      padding-bottom: 5rem;
+    }
+
+    .card {
+      background: var(--card);
+      padding: 1rem 1.2rem;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      box-shadow: 0 4px 18px rgba(0,0,0,0.4);
+      backdrop-filter: blur(6px);
+      transition: border 0.3s ease, transform 0.2s ease;
+    }
+
+    .card:hover {
+      border-color: var(--accent);
+      transform: translateY(-2px);
+    }
+
+    h2 {
+      font-size: 1.2rem;
+      margin-top: 0;
+      margin-bottom: 0.6rem;
+      color: var(--text);
+    }
+
+    .projects a {
+      display: block;
+      margin-bottom: 0.3rem;
+      padding-left: 0.4rem;
+      border-left: 2px solid var(--border);
+      color: #fafafa;
+      text-decoration: none;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .projects a:hover {
+      border-color: var(--accent);
+      color: #ffffff;
+      text-shadow: 0 0 6px rgba(255,255,255,0.4);
+    }
+
+    .contacts-fixed {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(20,20,20,0.92);
+      border-top: 1px solid rgba(255,255,255,0.1);
+      box-shadow: 0 0 25px rgba(255,255,255,0.15);
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 0.8rem 1rem;
+      backdrop-filter: blur(10px);
+      font-size: 0.9rem;
+      z-index: 9999;
+    }
+
+    .contacts-fixed a {
+      color: var(--accent);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+      transition: color 0.2s ease, text-shadow 0.3s ease;
+    }
+
+    .contacts-fixed a:hover {
+      color: #ffffff;
+      text-shadow: 0 0 8px rgba(255,255,255,0.5);
+    }
+
+    @media (max-width: 480px) {
+      h1 { font-size: 1.5rem; }
+      .card { padding: 0.8rem 1rem; }
+      main { max-width: 90%; }
+      .contacts-fixed { gap: 1rem; font-size: 0.85rem; }
+    }
   </style>
 </head>
 <body>
-  <div class="wrap" role="main">
+  <header>
     <h1>Francesco Fattori</h1>
-    <h2>Progetti</h2>
+    <p class="subtitle">Artista · Matematico</p>
+  </header>
 
-    <ul aria-label="Elenco progetti">
-      <li><a href="./3D_graph/">3D Graph</a></li>
-      <li><a href="./mandelbulb/">Mandelbulb</a></li>
-      <li><a href="./insulti_gratis/">Insulti Gratis</a></li>
-    </ul>
+  <main>
+    <div class="card projects">
+      <h2>Progetti</h2>
+      <a href="/3D_graph">3D Graph</a>
+      <a href="/mandelbulb">Mandelbulb</a>
+      <a href="/insulti_gratis">Insulti Gratis</a>
+    </div>
+  </main>
+
+  <div class="contacts-fixed">
+    <a href="mailto:francescofattori04@gmail.com">📧 francescofattori04@gmail.com</a>
+    <a href="https://github.com/FrancescoFattori" target="_blank">🐙 GitHub</a>
+    <a href="https://www.instagram.com/francesco.fattori/" target="_blank">🖼️ Instagram</a>
   </div>
 </body>
 </html>
