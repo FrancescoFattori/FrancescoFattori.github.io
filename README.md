@@ -13,6 +13,7 @@ Since Github Pages uses https and prevents unsecure connections external servers
 
 ## Include other repositories
 It's possible to access other repositories files if the repository is published as a page on their settings menu.\
-The root folder for this files is `/repository_name/` and at this url the `index.html` file will be displayed.\
+The root folder for this files is the same and at this url `/repository_name/` the `index.html` file will be displayed.\
 It's important to notice that if a file is hosted on the main repository and has the same name of another repository
 it won't be accessible because the url `/filename` will be redirected to `/repository_name/` (`filename == repository_name`).\
+Path to files can be relative `./index.css` (suggested), or static `/repository_name/index.css` (better avoid using this as repository could change name).
