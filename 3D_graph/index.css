@@ -101,7 +101,7 @@ canvas {
     background: none;
     z-index: 1;
     color: white;
-    text-shadow: 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black;
+    text-shadow: 0 0 2px black, 0 0 2px black, 0 0 2px black, 0 0 2px black;
     font-family: 'Courier New', monospace;
 }
 
@@ -258,5 +258,6 @@ canvas {
     top: 50%;
     transform: translateY(-50%);
     font-size: 1.25vmin;
+    text-shadow: 0 0 2px black, 0 0 2px black, 0 0 2px black, 0 0 2px black;
     color: white;
 }

@@ -5,16 +5,16 @@
 <!--/3D Graph/-->
 <head>
     <title>3D Graph</title>
-    <link rel="stylesheet" type="text/css" href="dependencies/font-awesome_6.4.0_all.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="index.css">
     <script defer type="text/javascript" src="raymarch_shader.js"></script>
     <script defer type="text/javascript" src="index.js"></script>
-    <script defer src="dependencies/mathlive_0.107.1.min.js"></script>
+    <script defer src="https://unpkg.com/mathlive@0.94.8/dist/mathlive.min.js"></script>
     <script defer type="text/javascript" src="dependencies/math-expressions.js"></script>
 </head>
 
 <body>
-
     <div id="equationDiv">
         <math-field id="formula"
             onchange="updateShader();">x^4+y^4+z^4-5\left(x^2y^2+y^2z^2+x^2z^2\right)+56xyz-20\left(x^2+y^2+z^2\right)+16</math-field>
@@ -112,15 +112,15 @@
             <br>
             &nbsp&nbsp<input type="checkbox" id="colorIteration" onchange="updateOptions();">
             <label for="colorIteration">Color Iteration</label>
-            &nbsp&nbsp<input type="color" id="backgroundColor" value="#000000">
+            &nbsp&nbsp<input type="color" id="backgroundColor" value="#dea0a0">
             <br>
             &nbsp&nbsp<input type="checkbox" id="perspective" onchange="updateOptions();">
             <label for="perspective">Perspective</label>
-            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="color" id="color1" value="#77dd00">
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="color" id="color1" value="#fe48dd">
             <br>
             &nbsp&nbsp<input type="checkbox" id="lighting" onchange="updateOptions();" checked="true">
             <label for="lighting" title="not accurate">Lighting</label>
-            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="color" id="color2" value="#7700dd">
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="color" id="color2" value="#7affcc">
             <br>
             &nbsp&nbsp<input type="checkbox" id="fpsToggle" onchange="updateOptions();" checked="true">
             <label for="fpsToggle">Show Fps</label>
@@ -142,7 +142,7 @@
             <label for="fpsToggle">Linear Filter</label><br>
             <br>
             &nbsp&nbsp<label id="limitRadiusLabel" for="limitRadius">Limit Radius: Unbound</label><br>
-            <input id="limitRadius" type="range" min="0.0" max="100.0" value="25" step="0.01" class="range"
+            <input id="limitRadius" type="range" min="0.0" max="100.0" value="42.5" step="0.01" class="range"
                 style="width:95%;left:2.5%" oninput="updateOptions();"><br><br>
             &nbsp&nbsp<button onclick="document.getElementById('import').click();" style="margin-bottom:5px;"
                 title="import a project file (.3dg)">Import File</button><br>
