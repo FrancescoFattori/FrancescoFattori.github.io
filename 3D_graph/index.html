@@ -35,36 +35,36 @@
             <br>
             &nbsp&nbsp<select id="equationsSelector" onchange="selectEquation(this);" style="max-width: 90%;">
                 <option selected disabled>Examples</option>
-                <option value="x^2+y^2-z" algorithm="2">
+                <option value="z-(x^2+y^2)" algorithm="2">
                     Paraboloid
                 </option>
                 <option
                     value="\frac{1}{\left(\left(x-3A\right)^2+y^2+z^2\right)}+\frac{1}{\left(x^2+\left(y-3B\right)^2+z^2\right)}+\frac{1}{\left(x^2+y^2+\left(z-3C\right)^2\right)}-1"
-                    algorithm="0">
+                    algorithm="3">
                     Blobs
                 </option>
                 <option
-                    value="A\left(\left(2-\sqrt{x^2+y^2}\right)^2+z^2-1\right)+\left(1-A\right)\left(x^2+y^2+z^2-4\right)"
+                    value="\left(1-A\right)\left(4-\left(x^2+y^2+z^2\right)\right)-A\left(\left(2-\sqrt{x^2+y^2}\right)^2+z^2-1\right)"
                     algorithm="2">
                     Sphere and Donut
                 </option>
                 <option
-                    value="A\left(\left(2-\sqrt{x^4+y^4}\right)^2+4z^2-2\right)+\left(1-A\right)\left(x^4+y^4+z^4-4\right)"
+                    value="\left(1-A\right)\left(4-\left(x^4+y^4+z^4\right)\right)-A\left(\left(2-\sqrt{x^4+y^4}\right)^2+4z^2-2\right)"
                     algorithm="2">
                     Cube and Donut
                 </option>
                 <option
-                    value="\left(\left(2-\sqrt{x^2+y^2}\right)^2+z^2-\frac14\right)\left(\left(2-\sqrt{z^2+y^2}\right)^2+x^2-\frac14\right)\left(\left(2-\sqrt{x^2+z^2}\right)^2+y^2-\frac14\right)"
+                    value="-\left(\left(2-\sqrt{x^2+y^2}\right)^2+z^2-\frac14\right)\left(\left(2-\sqrt{z^2+y^2}\right)^2+x^2-\frac14\right)\left(\left(2-\sqrt{x^2+z^2}\right)^2+y^2-\frac14\right)"
                     algorithm="2">
                     TriDonut
                 </option>
                 <option
-                    value="2y\left(y^2-3x^2\right)\left(1-z^2\right)+\left(x^2+y^2\right)^2-\left(9z^2-1\right)\left(1-z^2\right)"
+                    value="\left(9z^2-1\right)\left(1-z^2\right)-2y\left(y^2-3x^2\right)\left(1-z^2\right)-\left(x^2+y^2\right)^2"
                     algorithm="2">
                     Genus 2
                 </option>
                 <option
-                    value="\left(x^2+y^2+z^2+y-0.5\right)\left(\left(x^2+y^2+z^2-y-0.5\right)^2-4z^2\right)+8xz\left(x^2+y^2+z^2-y-0.5\right)"
+                    value="\left(0.5-y-\left(x^2+y^2+z^2\right)\right)\left(\left(x^2+y^2+z^2-y-0.5\right)^2-4z^2\right)-8xz\left(x^2+y^2+z^2-y-0.5\right)"
                     algorithm="2">
                     Klein Bottle
                 </option>
