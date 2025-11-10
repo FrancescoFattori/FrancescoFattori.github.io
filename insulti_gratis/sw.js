@@ -1,5 +1,5 @@
 const STATIC_ASSETS = [
-    "/index.html"
+    "/insulti_gratis/"
 ];
 
 async function cacheAssets() {
